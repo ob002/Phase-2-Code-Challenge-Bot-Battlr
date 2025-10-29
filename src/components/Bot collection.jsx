@@ -1,13 +1,13 @@
 import React from "react"
-import BotCard from "./BotCard";
+import Botcard from "./Botcard";
 
 function BotCollection({ bots, handleOnClick, handleDelete }) {
   
   return (
 
-    <div className="w-full bg-gray-800/40 p-6 rounded-2xl shadow-lg">
+    <div className="w-full bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-600">
       
-      <h2 className="text-xl font-bold mb-4 text-amber-300 text-center">
+      <h2 className="text-xl font-bold mb-4 text-cyan-400 text-center">
         Available Bots
       </h2>
 
@@ -16,7 +16,7 @@ function BotCollection({ bots, handleOnClick, handleDelete }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {bots.map((bot) => (
 
-            <BotCard
+            <Botcard
               key={bot.id}
               bot={bot}
               onAdd={() => handleOnClick(bot)}
@@ -28,7 +28,7 @@ function BotCollection({ bots, handleOnClick, handleDelete }) {
         </div>
       ) : (
 
-        <p className="text-gray-400 text-center">Loading bots...</p>
+        <p className="text-gray-300 text-center">Loading bots...</p>
       
       )}
     </div>

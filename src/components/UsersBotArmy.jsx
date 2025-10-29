@@ -1,14 +1,14 @@
 import React from "react";
-import BotCard from "./BotCard";
+import Botcard from "./Botcard";
 
-function YourBotArmy({ botArmy, handleDelete, handleOnClick }) {
+function UsersBotArmy({ botArmy, handleDelete, handleOnClick }) {
 
   return (
 
-    <div className="w-full bg-emerald-800/30 p-6 rounded-2xl shadow-lg">
+    <div className="w-full bg-gray-800 p-6 rounded-lg shadow-lg border border-cyan-600">
       
-      <h2 className="text-xl font-bold mb-4 text-teal-300 text-center">
-        <i className="fa-solid fa-shield-halved text-blue-400"></i> Your Bot Army
+      <h2 className="text-xl font-bold mb-4 text-cyan-400 text-center">
+       Your Bot Army
       </h2>
 
       {botArmy.length > 0 ? (
@@ -16,7 +16,7 @@ function YourBotArmy({ botArmy, handleDelete, handleOnClick }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {botArmy.map((bot) => (
 
-            <BotCard
+            <Botcard
               key={bot.id}
               bot={bot}
               onAdd={() => handleOnClick(bot)}
@@ -29,7 +29,7 @@ function YourBotArmy({ botArmy, handleDelete, handleOnClick }) {
         </div>
       ) : (
 
-        <p className="text-gray-400 text-center">No bots in your army yet.</p>
+        <p className="text-gray-300 text-center">No bots in your army yet.</p>
      
       )}
       
@@ -37,4 +37,4 @@ function YourBotArmy({ botArmy, handleDelete, handleOnClick }) {
   );
 }
 
-export default YourBotArmy;
+export default UsersBotArmy;

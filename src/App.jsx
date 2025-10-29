@@ -1,10 +1,10 @@
 import React from "react";
- import BotsPage from "../components/BotsPage";
+import Botspage from "./pages/Botspage";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center">
-      <BotsPage />
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
+      <Botspage />
     </div>
   );
 }

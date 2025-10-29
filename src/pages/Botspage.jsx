@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import YourBotArmy from "../components/YourBotArmy";
-import BotCollection from "../components/BotCollection";
+import UsersBotArmy from "../components/UsersBotArmy";
+import Botcollection from "../components/Botcollection";
 
 
-function BotsPage() {
+function Botspage() {
   const [bots, setBots] = useState([]);
   const [botArmy, setBotArmy] = useState([]);
 
@@ -64,19 +64,19 @@ function BotsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center p-6 space-y-8 w-full">
+    <div className="min-h-screen bg-gray-800 text-white flex flex-col items-center p-6 space-y-8 w-full">
 
-      <h1 className="text-3xl font-extrabold  text-teal-400 tracking-wide text-center">
-        Bot Battlr
+      <h1 className="text-4xl font-bold text-cyan-400 tracking-wider text-center">
+        BOT BATTLR
       </h1>
 
-       <YourBotArmy 
+       <UsersBotArmy 
         botArmy={botArmy}
         handleDelete={handleDelete}
         handleOnClick={handleOnClick}
       />
 
-      <BotCollection 
+      <Botcollection 
         bots={bots}
         handleDelete={handleDelete}
         handleOnClick={handleOnClick}
@@ -86,4 +86,4 @@ function BotsPage() {
   );
 }
 
-export default BotsPage;
+export default Botspage;
